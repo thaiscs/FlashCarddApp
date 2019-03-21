@@ -95,13 +95,13 @@ describe('User interaction', function(){
   })
 
   it('Your body should render a <button> element with an id "showAnswer" and display the text "Show Answer!', function() {
-    expect(showAnswerButton, 'You have no <button> element rendering with and id="showAnsser"!').to.exist
+    expect(showAnswerButton, 'You have no <button> element rendering with and id="showAnwser"!').to.exist
     expect(showAnswerButton.innerHTML, 'It does not display "Show Answer!"').to.equal('Show Answer!')
   })
 
   it('The button with id "showAnswer" should have an eventListener "onclick" and an eventHandler "showAnswer"', function() {
     expect(showAnswerButton, 'There is no "onclick" event listener!').to.have.property("onclick")
     console.log(showAnswerButton.onclick.toString())
-    expect(showAnswerButton.onclick.toString(), 'There is no "showAnswer" event handler!').to.equal('function () { showAnswer() }')
+    expect(showAnswerButton.onclick.toString(), 'There is no "showAnswer" event handler!').to.include('showAnswer()')
   })
 })
