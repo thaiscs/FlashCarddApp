@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Mocha Tests</title>
+  <title>FlashCard App</title>
   <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
 </head>
 
@@ -12,7 +12,27 @@
   <section id="title">
   </section>
   <p id="answer"></p>
+  <button id="showQuestion" onclick="showQuestion();">SHOW RANDOM QUESTION</button>
   <button id="showAnswer" onclick="showAnswer();">Show Answer!</button>
+  <button id="nextQuestion" onclick="nextQuestion();">Next Question!</button>
+
+  <h4>ADD YOUR OWN FLASHCARDS!</h4>
+
+  <form onsubmit="addCard(); return false">
+  <input id="input" type="text"/>
+  <br>
+  <input id="inputAnswer" type="text"/>
+  <button type="submit">Add Card</button>
+  <button type="reset" value="Reset">Reset</button>
+  </form>
+
+  <br>
+  <br>
+  <h4>CATEGORIES</h4>
+  <div id="categories">
+    <button id="Got" onclick="categorieGot();">Got</button>
+  </div>
+
 
 
 
